@@ -39,7 +39,7 @@ class StaffManage
 
     # Lấy ra mã nhân viên có số lương > số lương đuợc chỉ định
     
-    def self.getStaffIDWithSalaryGreaterThan(salary_condition) 
+    def self.get_staff_id_with_salary_greadter_than(salary_condition) 
         puts "Các nhân viên có lương > #{salary_condition}là: "
         @@staffs.each do |staff|
             if staff.salary_caculate() > salary_condition 
@@ -50,7 +50,7 @@ class StaffManage
 
     # Thêm nhân viên mới 
 
-    def self.addNewMember()
+    def self.add_new_staff()
         puts "Nhập tên nhân viên: "
         staff_name = gets.chomp
         puts "Nhập bộ phân làm việc: "

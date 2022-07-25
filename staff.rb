@@ -12,7 +12,7 @@ class Staff
     end
     
     # in ra staff info
-    def staff_info()
+    def staff_info
         puts "Mã nhân viên: #{@staff_id}"
         puts "Tên nhân viên: #{@staff_name}" 
         puts "Bộ phân làm việc: #{@staff_department}"
@@ -21,12 +21,12 @@ class Staff
     end
 
     # Tính luơng nhân viên
-    def salary_caculate() 
+    def salary_caculate
         return @BASIC_SALARY * @staff_hours;
     end
 
     # Thay đổi thời gian làm việc của nhân viên
-    def setStaffHours(hours = 0)
+    def set_staff_hours(hours = 0)
         @staff_hours = hours
     end
 end
@@ -50,11 +50,11 @@ class Dev < Staff
         puts "Lương của nhân viên: #{salary_caculate()}"
     end
 
-    def salary_caculate() 
+    def salary_caculate
        return @BASIC_SALARY * @staff_hours * (1 + @SUPORT_SALARY_PERCENT) + @overtime * @OVERTIME_SALARY
     end
 
-    def setOvertime(overtime = 0)
+    def set_overtime(overtime = 0)
         @overtime = overtime
     end
 end
