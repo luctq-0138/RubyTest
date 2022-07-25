@@ -3,7 +3,7 @@
 class Staff
     attr_accessor :staff_name, :staff_id, :staff_department
     # Khởi tạo staff info
-    def initialize(staff_name, staff_id, staff_department, staff_hours = 0) 
+    def initialize(staff_id, staff_name, staff_department, staff_hours = 0) 
         @BASIC_SALARY = 3000
         @staff_name = staff_name
         @staff_id = staff_id
